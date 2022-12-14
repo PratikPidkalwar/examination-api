@@ -8,20 +8,22 @@ const paperschema = new mongoose.Schema({
         type: String,
         trim: true
     },
-    questions: {
+    question: {
         type: String, required: true, trim: true
     },
-    options1: {
-        type: String, required: true, trim: true
-    },
-    options2: {
-        type: String, required: true, trim: true
-    },
-    options3: {
-        type: String, required: true, trim: true
-    },
-    options4: {
-        type: String, required: true, trim: true
+    option: {
+        option1: {
+            type: String, required: true, trim: true
+        },
+        option2: {
+            type: String, required: true, trim: true
+        },
+        option3: {
+            type: String, required: true, trim: true
+        },
+        option4: {
+            type: String, required: true, trim: true
+        },
     },
     answer: {
         type: String, trim: true, required: true
