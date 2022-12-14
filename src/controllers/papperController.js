@@ -20,4 +20,4 @@ const createPapper = async (req, res) => {
     }
 }
 
-module.exports = { createStudents };
+module.exports = { createPapper };

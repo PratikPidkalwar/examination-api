@@ -9,14 +9,16 @@ const multer = require("multer");
 
 
 mongoose.connect("mongodb+srv://lalitkishork73:UzPr9bb6Wvxda9eC@cluster0.o2wavxe.mongodb.net/Assingment1DB?retryWrites=true&w=majority", {
-        useNewUrlParser: true
-    })
+    useNewUrlParser: true
+})
     .then(() => console.log("mongoDB is connected"))
     .catch((error) => console.log(error))
+
+mongoose.set('strictQuery', true);
 app.use(multer().any())
 
 app.use('/', route)
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log("express app is running on PORT " + (process.env.PORT || 3000))
+app.listen(process.env.PORT || 3002, function () {
+    console.log("express app is running on PORT " + (process.env.PORT || 3002))
 })
